@@ -1,15 +1,22 @@
-import './App.css';
-import Footer from './components/Footer'
-import Apples from './components/Apples';
-import Pears from './components/Pears';
-import Bag from './components/Bag';
+import './App.css'
+import {Routes, Route, Link} from 'react-router-dom'
+
+import Btn from "./components/Btn";
+import RegisterForm from "./components/RegisterForm";
 
 function App() {
     return (
-        <Bag>
-            <Apples color="yellow" number="5" />
-            <Pears friend="Peter" />
-        </Bag>
+        <div>
+        <nav>
+            <Link to="/button" className="nav-item">Button</Link>
+            <Link to='/form' className='nav-item'>Form</Link>
+        </nav>
+            <Routes>
+                <Route path='/button' element={<Btn/>}/>
+                <Route path='/form' element={<RegisterForm/>}/>
+            </Routes>
+        </div>
+        
     )
 }
 

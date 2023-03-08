@@ -1,4 +1,4 @@
-function Apples(props) {
+const Apples = props => {
     return (
         <div className="promo-section">
             <div>
